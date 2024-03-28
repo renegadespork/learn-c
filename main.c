@@ -2,16 +2,26 @@
 #include <stdbool.h>
 #include <unistd.h>
 int main() {
+    printf("Welcome to the C fruit market.\n============================\n\"It's written in C, but our fruit is A+!\"\n============================\n");
+    printf("Commencing new employee onboarding procedure. Please enter your name:\n");
+    char name[64] = "";
+    scanf("%s", name);
+    printf("Hello, %s. Concluding new employee onboarding prodedure.\n", name);
+    sleep(1);
     printf("Taking fruit inventory:\n");
+    sleep(1);
     int apples = 33;
     float applePrice = 0.53;
     printf("There are %d apples. Apples cost $%.2f each.\n", apples, applePrice);
+    sleep(1);
     int bananas = apples+9;
     float bananaPrice = 0.44;
     printf("There are %d banannas. Bananas cost $%.2f each.\n", bananas, bananaPrice);
+    sleep(1);
     double grapes = 58;
     float grapePrice = 0.02;
     printf("There are %.3lf grapes. We get precise with grapes. Grapes cost $%.2f each.\n", grapes, grapePrice);
+    sleep(1);
     int oranges;
     float orangePrice = 0.48;
 

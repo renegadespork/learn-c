@@ -8,8 +8,27 @@ int main() {
     scanf("%s", name);
     printf("Hello, %s. Concluding new employee onboarding prodedure.\n", name);
     sleep(1);
-    printf("Taking fruit inventory:\n");
-    sleep(1);
+    int menuOption;
+    printf("---=== Main Menu ===--\n Please choose an option:\n1. Take Fruit Inventory.\n2. Submit your resignation.\n");
+    scanf("%d", &menuOption);
+    switch (menuOption) {
+        case 1:
+            printf("Taking fruit inventory:\n");
+            sleep(1);
+        break;
+        case 2:
+            printf("Resignation accepted. You will be called in [ERROR] days for an exit interview.\n");
+            sleep(2);
+            printf("Goodbye.\n");
+            return 0;
+        break;
+        default:
+            printf("Invalid entry. Resignation accepted. You will be called in [ERROR] days for an exit interview.\n");
+            sleep(2);
+            printf("Goodbye.\n");
+            return 1;
+        break;
+    }
     int apples = 33;
     float applePrice = 0.53;
     printf("There are %d apples. Apples cost $%.2f each.\n", apples, applePrice);
